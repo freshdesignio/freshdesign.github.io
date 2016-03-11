@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact/Feedback | FreshDesign.io</title>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="scss/main.css">
+    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="contactPage">
+    <a href="index.html" class="logoHold">
+      <h1 class="defaultLogo">FreshDesign.io</h1>
+    </a>
+    <h1 class="wordsTitle">Contact / Feedback</h1>
+    <p class="words">Pretty straightforward, if you want your site or an element of it to be featured use this form. Please leave you name and email if you would like to know what happens<br>If you want to get in touch for another reason use the 'contact/feedback' link on the home page.</p>
+    <div class="contact">
+      <form action="http://formspree.io/thefreshdesign.io@gmail.com" method="POST" class="cntr">
+          <input name="name" type="text" id="name" placeholder="Name"/>
+          <input name="email" type="email" id="email" placeholder="Email"/>
+        <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
+				<input type="hidden" name="_next" value="html/responce.html" />
+        <input type="text" name="_gotcha" style="display:none;" />
+          <label for="message"></label>
+          <textarea class="cntr" id="message" name="message" placeholder="Message" Required></textarea>
+          <button class="cntr" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/velocity_and_ui.min.js"></script>
+  <script type="text/javascript" src="js/mixitup.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

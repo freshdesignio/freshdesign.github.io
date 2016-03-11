@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Libraries | FreshDesign</title>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="scss/main.css">
+    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="resources">
+    <div class="mobileMenuContainer">
+      <ul class="ul mobileMenu">
+        <li class="li main"><a href="index.html">Inspiration</a></li>
+        <li class="li main"><a href="tutorials.html">Tutorials</a></li>
+        <li class="li main"><a href="resources.html" class="menuActive">Resources</a></li>
+        <li class="li support"><a href="#">Submissions</a></li>
+        <li class="li support"><p class="contactBtn">Contact</p></li>
+      </ul>
+    </div>
+    <div class="contactSection">
+      <button class="contactExit">X</button>
+      <h1>Contact</h1>
+      <p>here is a section for some words </p>
+      <form action="http://formspree.io/email@mail.com" method="POST" class="cntr">
+          <input name="name" type="text" id="name" placeholder="Name" Required/>
+          <input name="email" type="email" id="email" placeholder="Email" Required/>
+
+          <input name="subject" type="subject" id="subject" placeholder="Subject" />
+        <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
+				<input type="hidden" name="_next" value="html/responce.html" />
+        <input type="text" name="_gotcha" style="display:none;" />
+          <label for="message"></label>
+          <textarea class="cntr" id="message" name="message" placeholder="Message" Required></textarea>
+          <button class="cntr" type="submit">Submit</button>
+      </form>
+    </div>
+  <div class="sortOptions">
+    <p class="sort" data-sort="date:desc">New -> Old</p>
+    <p class="sort" data-sort="date:asc">Old -> New</p>
+    <p class="sort" data-sort="random">Random</p>
+  </div>
+    <section class="left">
+      <a href="index.html" class="logoHold">
+        <h1 class="defaultLogo">FreshDesign.io</h1>
+        <h1 class="mobileLogo">Fresh <br style="margin-left:5px">Design<br>.io</h1>
+      </a>
+      <div class="leftNav">
+        <ul class="ul regMenu">
+          <li class="li main"><a href="index.html">Inspiration</a></li>
+          <li class="li main"><a href="tutorials.html">Tutorials</a></li>
+          <li class="li main"><a href="resources.html"  class="menuActive">Resources</a></li>
+          <li class="li support"><a href="#" >Submissions</a></li>
+          <li class="li support"><p class="contactBtn">Contact</p></li>
+        </ul>
+        <div class="lineHold">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      </div>
+      <footer>
+        <a href="http://matharu.io">
+          <img src="img/logo.png">
+          <p>Matharu.io</p>
+        </a>
+      </footer>
+    </section>
+
+    <section class="right">
+      <div class="filterHold">
+        <fieldset class="filter-group search">
+          <input class="searchBar" type="text" placeholder="search...">
+        </fieldset>
+        <ul class="topNav">
+          <li class="li sortBtn">
+            <p>Sort:</p>
+            <svg class="sortTriangle triangle" fill="none" stroke="white" stroke-width="2px" height="15px" width="15px">
+              <polygon points="2,12 7,2 12,12"/>
+            </svg>
+          </li>
+          <li class="li filters"><p>Filters</p></li>
+        </ul>
+      </div>
+      <section id="Container">
+        <div class="mix item">
+          <a href="library/typography.html">
+            <img src="img/resources/typography.png">
+          </a>
+        </div>
+        <div class="mix item">
+          <a href="#">
+            <img src="img/resources/compression.png">
+          </a>
+        </div>
+        <div class="mix item">
+          <a href="#">
+            <img src="#">
+          </a>
+        </div>
+        <div class="mix item">
+          <a href="#">
+            <img src="#">
+          </a>
+        </div>
+
+      </section>
+    </section>
+
+  </body>
+
+  <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/velocity_and_ui.min.js"></script>
+  <script type="text/javascript" src="js/lazySizes.min.js"></script>
+  <script type="text/javascript" src="js/mixitup.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+  <script>
+  (function(){
+    console.log('instafunction');
+    $('.top').velocity({ translateX:'-100%'},{duration:0, delay:0,queue:false})
+    $('.bottom').velocity({ translateX:'100%'},{duration:0, delay:0,queue:false})
+
+  })();
+  </script>
+</html>

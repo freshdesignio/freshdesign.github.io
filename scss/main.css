@@ -1,0 +1,1107 @@
+/* definings */
+/* global styles */
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  *:focus {
+    outline: 0; }
+
+.cntr {
+  display: block;
+  margin: 0 auto; }
+
+.crcl {
+  border-radius: 100%; }
+
+.ul {
+  text-align: center; }
+
+.li {
+  display: inline-block; }
+
+html,
+body {
+  height: 100%;
+  min-height: 100%; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  background-color: black; }
+
+.noPoint {
+  pointer-events: none !important; }
+
+.menuActive {
+  border-bottom: none !important;
+  color: white !important; }
+  .menuActive:before {
+    content: url("../img/menuActive.svg");
+    margin-right: 5px; }
+
+.contactBtn {
+  color: #BF7924 !important; }
+  .contactBtn:hover {
+    cursor: pointer; }
+
+.mobileMenuContainer {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #56151e;
+  z-index: 40000;
+  font-family: "Anonymous Pro", monospace; }
+  .mobileMenuContainer .mobileMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 80%;
+    width: 300px;
+    background-color: #6b1924;
+    -webkit-box-shadow: 1px -1px 74px -10px black;
+    -moz-box-shadow: 1px -1px 74px -10px black;
+    box-shadow: 1px -1px 74px -10px black; }
+    .mobileMenuContainer .mobileMenu .main a {
+      color: #DBD967; }
+    .mobileMenuContainer .mobileMenu .support a {
+      color: #BF7924; }
+    .mobileMenuContainer .mobileMenu .li {
+      position: relative;
+      top: 30%;
+      transform: translateY(-30%);
+      width: 100%;
+      text-align: center; }
+      .mobileMenuContainer .mobileMenu .li:nth-child(n+2) {
+        margin-top: 5px; }
+      .mobileMenuContainer .mobileMenu .li:nth-child(-n+3) {
+        margin-bottom: 5px; }
+      .mobileMenuContainer .mobileMenu .li a:nth-child(-n+3) {
+        padding-bottom: 3px; }
+      .mobileMenuContainer .mobileMenu .li:nth-child(3) {
+        margin-top: 20px; }
+  .mobileMenuContainer .mailingList {
+    z-index: 5000000000 !important;
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 350px; }
+    @media only screen and (max-width: 970px) {
+      .mobileMenuContainer .mailingList {
+        display: block; } }
+    .mobileMenuContainer .mailingList form {
+      display: block;
+      margin: 0 auto;
+      width: 200px !important; }
+      .mobileMenuContainer .mailingList form label {
+        text-align: center; }
+      .mobileMenuContainer .mailingList form input {
+        width: 150px; }
+
+.contactSection {
+  overflow-x: scroll;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 90%;
+  width: 40%;
+  border-right: 20px;
+  background: #70e1f5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #70e1f5, #ffd194);
+  background: -o-linear-gradient(right, #70e1f5, #ffd194);
+  background: linear-gradient(to left, #70e1f5, #ffd194);
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 100000000; }
+  @media only screen and (max-width: 1000px) {
+    .contactSection {
+      width: 50%; } }
+  @media only screen and (max-width: 750px) {
+    .contactSection {
+      width: 60%; } }
+  @media only screen and (max-width: 575px) {
+    .contactSection {
+      width: 70%; } }
+  @media only screen and (max-width: 420px) {
+    .contactSection {
+      width: 85%; } }
+  .contactSection .contactExit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 15px; }
+  .contactSection h1 {
+    color: white;
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 3px; }
+  .contactSection p {
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto; }
+    .contactSection p a {
+      color: black;
+      border-bottom: 1px solid black; }
+  .contactSection form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid yellow;
+    border: 1px solid transparent;
+    width: 80%;
+    padding: 0;
+    font-family: "Anonymous Pro", monospace; }
+    @media only screen and (max-width: 750px) {
+      .contactSection form {
+        width: 75%; } }
+    @media only screen and (max-width: 550px) {
+      .contactSection form {
+        width: 90%; } }
+    .contactSection form #name,
+    .contactSection form #email,
+    .contactSection form #subject,
+    .contactSection form #message {
+      background-color: transparent;
+      border: 1px solid black;
+      padding: 5px;
+      color: black;
+      font-size: 15px; }
+      .contactSection form #name:focus,
+      .contactSection form #email:focus,
+      .contactSection form #subject:focus,
+      .contactSection form #message:focus {
+        outline: 0;
+        border: double; }
+    .contactSection form #name,
+    .contactSection form #email {
+      height: 30px;
+      position: absolute;
+      width: 50%;
+      border-bottom: none; }
+    .contactSection form #name {
+      top: 20px;
+      left: 0; }
+    .contactSection form #email {
+      top: 20px;
+      right: 0;
+      border-left: none; }
+    .contactSection form #subject {
+      height: 30px;
+      display: block;
+      margin: 50px auto 0 auto;
+      width: 100%;
+      border-bottom: none; }
+    .contactSection form #message {
+      width: 100%;
+      height: 200px; }
+      @media only screen and (max-height: 565px) {
+        .contactSection form #message {
+          height: 150px; } }
+      @media only screen and (max-height: 510px) {
+        .contactSection form #message {
+          height: 130px; } }
+      @media only screen and (max-height: 485px) {
+        .contactSection form #message {
+          height: 100px; } }
+    .contactSection form button {
+      height: 60px;
+      width: 150px;
+      border: 1px solid #3E92CC;
+      background-color: transparent;
+      color: #3E92CC;
+      margin: 20px  auto; }
+    .contactSection form ::-webkit-input-placeholder {
+      color: #DB5C5C; }
+    .contactSection form :-moz-placeholder {
+      /* Firefox 18- */
+      color: #DB5C5C; }
+    .contactSection form ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #DB5C5C; }
+    .contactSection form :-ms-input-placeholder {
+      color: #DB5C5C; }
+
+.types,
+.components {
+  width: 100%;
+  height: 47%;
+  z-index: 10000000;
+  position: absolute;
+  right: 0;
+  opacity: 0.95 !important;
+  transform: translateX(100%); }
+  .types h1,
+  .components h1 {
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+    margin-left: 15px;
+    opacity: inherit;
+    color: #C1F2F2 !important;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+  .types .checkbox,
+  .components .checkbox {
+    margin-top: 10px;
+    font-family: "Dosis", sans-serif; }
+
+.types {
+  background-color: #746493;
+  top: 50px; }
+
+.components {
+  background-color: #6B5B82;
+  bottom: 0px; }
+
+fieldset {
+  border: none; }
+  fieldset .checkbox {
+    display: inline-block;
+    margin-left: 20px;
+    color: #EB9486;
+    vertical-align: middle; }
+  fieldset input[type="checkbox"] {
+    float: left;
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    -webkit-appearance: none; }
+    fieldset input[type="checkbox"]:focus {
+      outline: 0; }
+  fieldset input[type="checkbox"]:not(:disabled) {
+    background: transparent;
+    border: 2px solid #C1F2F2; }
+  fieldset input[type="checkbox"]:checked {
+    background: #C1F2F2; }
+
+.left,
+.right {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0; }
+
+.topic {
+  display: none;
+  width: 30%;
+  color: black;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50px;
+  text-align: right; }
+
+.typeHold,
+.topicHold {
+  border: 1px solid white;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  right: 5%; }
+  .typeHold .li,
+  .topicHold .li {
+    padding: 5px 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-family: "Anonymous Pro", monospace;
+    margin-top: 10px; }
+    .typeHold .li:hover,
+    .topicHold .li:hover {
+      cursor: pointer; }
+
+.typeTopicActive {
+  color: black !important;
+  border: 3px solid black !important; }
+
+.typeHold {
+  top: 0; }
+
+.topicHold {
+  bottom: 0; }
+
+.left {
+  left: 0;
+  width: 20%;
+  background-color: #56151E;
+  overflow: hidden; }
+  @media only screen and (max-width: 835px) {
+    .left .logoHold {
+      left: 10px; }
+    .left .leftNav {
+      left: 10px; }
+    .left .main {
+      font-size: 15px; }
+    .left .support {
+      font-size: 12px; } }
+  @media only screen and (max-width: 700px) {
+    .left {
+      width: 75px !important; } }
+
+.logoHold {
+  position: relative;
+  top: 0px;
+  left: 20px;
+  right: 0;
+  margin: auto;
+  height: 200px;
+  width: 70%; }
+  .logoHold img {
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    border: 2px solid lightblue; }
+  .logoHold .defaultLogo,
+  .logoHold .mobileLogo {
+    text-align: left;
+    letter-spacing: 0px;
+    font-family: "Pacifico", cursive;
+    color: #68C5DB;
+    text-shadow: black 5px 2px 9px; }
+  .logoHold .defaultLogo {
+    font-size: 24px; }
+    @media only screen and (max-width: 835px) {
+      .logoHold .defaultLogo {
+        font-size: 20px; } }
+    @media only screen and (max-width: 700px) {
+      .logoHold .defaultLogo {
+        display: none; } }
+  .logoHold .mobileLogo {
+    display: none; }
+    @media only screen and (max-width: 700px) {
+      .logoHold .mobileLogo {
+        display: block;
+        font-size: 20px;
+        line-height: 20px; } }
+
+.sortOptions {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  height: 100px;
+  width: 180px;
+  background-color: #721A26;
+  z-index: 10000; }
+  .sortOptions .sort {
+    font-family: "Anonymous Pro", monospace;
+    color: #F2ECC1;
+    float: left;
+    margin-left: 30px; }
+    .sortOptions .sort:nth-child(1) {
+      margin-top: 20px; }
+    .sortOptions .sort:nth-child(2) {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .sortOptions .sort:nth-child(3) {
+      margin-bottom: 20px; }
+  .sortOptions .sort:before {
+    content: '';
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid #C1F2F2;
+    background-color: transparent; }
+  .sortOptions p.active::before {
+    background-color: #4A4E69; }
+
+.mailingList {
+  position: absolute;
+  left: 20px;
+  bottom: 150px;
+  height: auto;
+  width: auto;
+  z-index: 1000; }
+  @media only screen and (max-width: 970px) {
+    .mailingList {
+      display: none; } }
+  .mailingList label {
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-size: 13px;
+    display: block;
+    padding: 5px 0; }
+  @media only screen and (max-width: 980px) {
+    .mailingList form {
+      width: 170px !important; } }
+  .mailingList form {
+    height: 20px;
+    width: 200px; }
+    .mailingList form input,
+    .mailingList form button {
+      display: inline-block !important;
+      vertical-align: middle !important; }
+    .mailingList form input {
+      background-color: transparent;
+      border: 1px solid white;
+      padding: 5px;
+      font-family: "Dosis", sans-serif;
+      color: white;
+      letter-spacing: 2px;
+      font-size: 13px !important; }
+    .mailingList form button {
+      background-color: #639FAB;
+      color: white;
+      height: 30px;
+      width: 30px;
+      border: none;
+      font-family: "Dosis", sans-serif; }
+    .mailingList form ::-webkit-input-placeholder {
+      color: white;
+      letter-spacing: 2px; }
+    .mailingList form :-moz-placeholder {
+      /* Firefox 18- */
+      color: white;
+      letter-spacing: 2px; }
+    .mailingList form ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: white;
+      letter-spacing: 2px; }
+    .mailingList form :-ms-input-placeholder {
+      color: white;
+      letter-spacing: 2px; }
+
+.leftNav {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 17px;
+  width: 100%;
+  height: 150px;
+  position: absolute !important;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  margin: auto; }
+  .leftNav .regMenu .li {
+    width: 100%;
+    text-align: left; }
+    .leftNav .regMenu .li:nth-child(n+2) {
+      margin-top: 5px; }
+    .leftNav .regMenu .li:nth-child(3) {
+      margin-top: 20px; }
+  .leftNav .regMenu .main {
+    margin-bottom: 10px; }
+    .leftNav .regMenu .main a {
+      color: #DBD967;
+      border-bottom: 1px solid #DBD967; }
+  .leftNav .regMenu .support {
+    font-size: 15px;
+    color: #BF7924 !important; }
+    .leftNav .regMenu .support a {
+      color: #BF7924 !important;
+      border-bottom: none !important; }
+  @media only screen and (max-width: 700px) {
+    .leftNav .regMenu {
+      display: none !important;
+      border: 10px solid white !important; } }
+  .leftNav .mobileMenu {
+    display: none; }
+  .leftNav .lineHold {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    bottom: 0;
+    margin: auto;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    z-index: 500000; }
+    .leftNav .lineHold:hover {
+      cursor: pointer; }
+    @media only screen and (min-width: 700px) {
+      .leftNav .lineHold {
+        display: none !important; } }
+    .leftNav .lineHold .line {
+      width: 70%;
+      height: 1px;
+      background-color: white;
+      display: block;
+      margin: 5px auto 0 auto; }
+    .leftNav .lineHold .line1 {
+      margin-top: 13px; }
+
+.right {
+  right: 0;
+  width: 80%;
+  background-color: #631721;
+  height: auto !important;
+  overflow: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 600px; }
+  @media only screen and (max-width: 700px) {
+    .right {
+      width: calc(100% - 75px); } }
+  .right .topNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-family: "Anonymous Pro", monospace; }
+    .right .topNav .li {
+      padding: 10px; }
+      .right .topNav .li p,
+      .right .topNav .li svg {
+        display: inline-block;
+        vertical-align: top; }
+      .right .topNav .li:hover {
+        cursor: pointer; }
+      .right .topNav .li:nth-child(1) {
+        margin-right: 150px; }
+    .right .topNav .sortBtn {
+      position: absolute;
+      top: 5px;
+      right: -60px;
+      width: 90px; }
+    .right .topNav .filters {
+      border: 1px solid white;
+      color: white;
+      font-family: "Anonymous Pro", monospace;
+      border: 1px solid white;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      z-index: 50000000 !important; }
+  .right #Container {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch; }
+    .right #Container .mix {
+      display: none; }
+  .right .filterHold {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 50px;
+    background-color: #721A26;
+    z-index: 10; }
+    @media only screen and (max-width: 700px) {
+      .right .filterHold {
+        width: calc(100% - 75px); } }
+    .right .filterHold ::-webkit-input-placeholder {
+      color: white; }
+    .right .filterHold ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: white; }
+    .right .filterHold :-ms-input-placeholder {
+      color: white; }
+    .right .filterHold fieldset {
+      border: none; }
+    .right .filterHold .searchBar {
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid white;
+      text-align: center;
+      color: white !important;
+      padding: 5px;
+      width: 400px;
+      font-family: "Anonymous Pro", monospace;
+      display: block;
+      margin: 0 auto; }
+      @media only screen and (max-width: 1000px) {
+        .right .filterHold .searchBar {
+          width: 300px;
+          margin: 0; } }
+      @media only screen and (max-width: 570px) {
+        .right .filterHold .searchBar {
+          width: 50%;
+          margin: 0; } }
+      @media only screen and (max-width: 425px) {
+        .right .filterHold .searchBar {
+          width: 40%;
+          margin: 0; } }
+  .right .special {
+    height: auto;
+    width: 90% !important; }
+    @media only screen and (max-width: 1000px) {
+      .right .special {
+        width: 95% !important; } }
+  .right .item {
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+    width: 45%;
+    padding: 20px;
+    position: relative;
+    z-index: 200; }
+    @media only screen and (max-width: 1000px) {
+      .right .item {
+        width: 47%;
+        padding: 10px; } }
+    @media only screen and (max-width: 900px) {
+      .right .item {
+        padding-bottom: 30px; } }
+    @media only screen and (max-width: 700px) {
+      .right .item {
+        width: 90% !important; } }
+    .right .item a {
+      height: 100%;
+      width: 100%; }
+    .right .item img {
+      height: 100%;
+      width: 100%; }
+    .right .item button {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      left: 25px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      color: white;
+      border: 2px solid white;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: "Dosis", sans-serif; }
+      @media only screen and (max-width: 900px) {
+        .right .item button {
+          display: block !important;
+          padding: 0;
+          border: none;
+          bottom: 12px;
+          left: 10px;
+          background-color: transparent; } }
+    .right .item .afterTutorial {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      color: white; }
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 13px;
+  text-align: center; }
+  @media only screen and (max-width: 700px) {
+    footer {
+      bottom: 0 !important; }
+      footer img,
+      footer a {
+        display: block  !important;
+        margin: 0 auto !important;
+        text-align: center  !important; }
+      footer img {
+        height: 30px !important;
+        width: 30px !important; }
+      footer a {
+        width: 80px !important;
+        border-bottom: none !important; }
+      footer p {
+        display: none; } }
+  footer img,
+  footer a {
+    display: inline-block;
+    vertical-align: middle; }
+  footer img {
+    height: 40px;
+    width: 40px; }
+  footer a {
+    color: white;
+    border-bottom: 1px solid white; }
+
+/*Page Specifics*/
+.tutorials #Container {
+  text-align: center; }
+  .tutorials #Container .mix {
+    display: none; }
+.tutorials .item {
+  height: auto;
+  width: 40%;
+  padding: 0;
+  position: relative;
+  font-family: "Anonymous Pro", monospace;
+  max-height: 500px;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top; }
+  @media only screen and (max-width: 1050px) {
+    .tutorials .item {
+      width: 45%; } }
+  .tutorials .item a {
+    height: auto;
+    width: 100%; }
+  .tutorials .item img {
+    height: auto;
+    width: 100%;
+    max-width: 400px; }
+  @media only screen and (max-width: 975px) {
+    .tutorials .item .title {
+      font-size: 17px; }
+    .tutorials .item .author,
+    .tutorials .item .date {
+      font-size: 13px; } }
+  @media only screen and (max-width: 775px) {
+    .tutorials .item {
+      width: 48%; } }
+  @media only screen and (max-width: 700px) {
+    .tutorials .item {
+      width: 90% !important; } }
+  @media only screen and (max-width: 700px) {
+    .tutorials .item .title {
+      font-size: 15px; }
+    .tutorials .item .author,
+    .tutorials .item .date {
+      font-size: 12px; } }
+.tutorials .title {
+  font-size: 20px;
+  color: #F2D5BC;
+  text-align: center;
+  padding-bottom: 3px;
+  padding-top: 10px;
+  font-family: 'Lora', serif;
+  letter-spacing: 0px; }
+.tutorials .date,
+.tutorials .author {
+  font-size: 15px;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  font-family: 'Dosis', sans-serif;
+  color: #A0E8AF; }
+.tutorials .date {
+  text-align: center; }
+.tutorials .author {
+  padding-bottom: 5px; }
+  .tutorials .author a {
+    color: inherit;
+    border-bottom: 1px solid #A0E8AF; }
+
+.resources .mix {
+  display: none; }
+.resources #Container .item {
+  height: auto;
+  width: 30%;
+  max-width: 400px;
+  max-height: 400px; }
+  @media only screen and (max-width: 700px) {
+    .resources #Container .item {
+      width: 35% !important; } }
+  @media only screen and (max-width: 585px) {
+    .resources #Container .item {
+      width: 45% !important; } }
+.resources #Container a,
+.resources #Container img {
+  height: 100%;
+  width: 100%; }
+
+.resourcesItem {
+  position: relative;
+  overflow: scroll;
+  border: 1px solid transparent; }
+  .resourcesItem .logo {
+    position: absolute !important;
+    top: 20px;
+    left: 20px; }
+    .resourcesItem .logo a {
+      color: lightblue;
+      text-align: left;
+      font-size: 24px;
+      letter-spacing: 0px;
+      font-family: "Pacifico", cursive; }
+  .resourcesItem .bigTitle {
+    text-align: left;
+    font-size: 70px;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    font-family: "Dosis", sans-serif !important; }
+  .resourcesItem .ul {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: scroll; }
+    .resourcesItem .ul .li {
+      margin-top: 30px;
+      display: block; }
+    .resourcesItem .ul img {
+      width: auto;
+      height: auto;
+      max-width: 90%; }
+
+.typographyItem {
+  background: #F1F2B5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F1F2B5, #135058);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #F1F2B5, #135058);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .typographyItem .logo {
+    position: absolute !important;
+    top: 20px;
+    left: 20px; }
+    .typographyItem .logo a {
+      color: lightblue; }
+  .typographyItem .bigTitle {
+    color: white;
+    font-family: cursive; }
+
+.submissions {
+  height: auto;
+  min-height: 100%;
+  width: 100% !important;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: #F0C27B;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F0C27B, #4B1248);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #F0C27B, #4B1248);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  position: relative; }
+  .submissions .logoHold {
+    display: block;
+    margin: 0 auto;
+    height: 70px;
+    width: 250px;
+    position: relative;
+    left: 0 !important; }
+    .submissions .logoHold h1 {
+      text-align: center;
+      color: #DCAD75;
+      text-shadow: #5e2929 5px 2px 6px; }
+    .submissions .logoHold .defaultLogo {
+      display: block !important;
+      font-size: 26px; }
+  .submissions .wordsTitle,
+  .submissions .words {
+    font-family: "Dosis", sans-serif; }
+  .submissions .wordsTitle {
+    color: #E1E572;
+    letter-spacing: 3px; }
+  .submissions .words {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto; }
+    .submissions .words a {
+      border-bottom: 1px solid black;
+      letter-spacing: 1px;
+      color: black; }
+    @media only screen and (max-width: 560px) {
+      .submissions .words {
+        width: 90%; } }
+  .submissions .contact {
+    position: relative;
+    width: 400px;
+    display: block;
+    margin: 0 auto; }
+    @media only screen and (max-width: 460px) {
+      .submissions .contact {
+        width: 80% !important; }
+        .submissions .contact #email,
+        .submissions .contact #name {
+          width: 50% !important; }
+        .submissions .contact #name {
+          left: 20% !important; } }
+    .submissions .contact form {
+      border: 1px solid transparent;
+      padding: 0;
+      font-family: "Anonymous Pro", monospace;
+      height: 350px;
+      margin-top: 20px; }
+      .submissions .contact form #name,
+      .submissions .contact form #email,
+      .submissions .contact form #message {
+        background-color: transparent;
+        border: 1px solid #E1E572;
+        padding: 10px;
+        color: black;
+        font-size: 15px; }
+        .submissions .contact form #name:focus,
+        .submissions .contact form #email:focus,
+        .submissions .contact form #message:focus {
+          outline: 0;
+          border: double;
+          color: #E1E572; }
+      .submissions .contact form #name,
+      .submissions .contact form #email {
+        height: 30px;
+        position: absolute;
+        width: 50%;
+        border-bottom: none;
+        top: 2px; }
+      .submissions .contact form #name {
+        left: 1px !important; }
+      .submissions .contact form #email {
+        right: 1px !important;
+        border-left: none; }
+      .submissions .contact form #message {
+        width: 100%;
+        height: 200px;
+        margin-top: 30px; }
+      .submissions .contact form button {
+        height: 60px;
+        width: 150px;
+        border: none;
+        background-color: #68C5DB;
+        color: black;
+        margin: 20px  auto; }
+      .submissions .contact form ::-webkit-input-placeholder {
+        color: #E1E572; }
+      .submissions .contact form :-moz-placeholder {
+        /* Firefox 18- */
+        color: #E1E572; }
+      .submissions .contact form ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #E1E572; }
+      .submissions .contact form :-ms-input-placeholder {
+        color: #E1E572; }
+
+.contactPage {
+  height: auto;
+  min-height: 100%;
+  width: 100% !important;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: #DAE2F8;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #DAE2F8, #D6A4A4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #DAE2F8, #D6A4A4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  position: relative; }
+  .contactPage .logoHold {
+    display: block;
+    margin: 0 auto;
+    height: 70px;
+    width: 250px;
+    position: relative;
+    left: 0; }
+    .contactPage .logoHold h1 {
+      text-align: center !important;
+      color: #DAE1F7;
+      text-shadow: #5e2929 5px 2px 6px; }
+    .contactPage .logoHold .defaultLogo {
+      display: block !important;
+      font-size: 26px; }
+  .contactPage .wordsTitle,
+  .contactPage .words {
+    font-family: "Dosis", sans-serif; }
+  .contactPage .wordsTitle {
+    color: white;
+    letter-spacing: 3px; }
+  .contactPage .words {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto; }
+    @media only screen and (max-width: 560px) {
+      .contactPage .words {
+        width: 90%; } }
+  .contactPage .contact {
+    position: relative;
+    width: 400px;
+    display: block;
+    margin: 0 auto; }
+    @media only screen and (max-width: 460px) {
+      .contactPage .contact {
+        width: 80% !important; }
+        .contactPage .contact #email,
+        .contactPage .contact #name {
+          width: 50% !important; }
+        .contactPage .contact #name {
+          left: 20% !important; } }
+    .contactPage .contact form {
+      border: 1px solid transparent;
+      padding: 0;
+      font-family: "Anonymous Pro", monospace;
+      height: 350px;
+      margin-top: 20px; }
+      .contactPage .contact form #name,
+      .contactPage .contact form #email,
+      .contactPage .contact form #message {
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 10px;
+        color: white;
+        font-size: 15px; }
+        .contactPage .contact form #name:focus,
+        .contactPage .contact form #email:focus,
+        .contactPage .contact form #message:focus {
+          outline: 0;
+          border: double;
+          color: black; }
+      .contactPage .contact form #name,
+      .contactPage .contact form #email {
+        height: 30px;
+        position: absolute;
+        width: 50%;
+        border-bottom: none; }
+      .contactPage .contact form #name,
+      .contactPage .contact form #email {
+        top: 2px; }
+      .contactPage .contact form #name {
+        left: 1px !important; }
+      .contactPage .contact form #email {
+        right: 1px !important;
+        border-left: none; }
+      .contactPage .contact form #message {
+        width: 100%;
+        height: 200px;
+        margin-top: 30px; }
+      .contactPage .contact form button {
+        height: 60px;
+        width: 150px;
+        border: none;
+        background-color: #68C5DB;
+        color: black;
+        margin: 20px  auto; }
+      .contactPage .contact form ::-webkit-input-placeholder {
+        color: white; }
+      .contactPage .contact form :-moz-placeholder {
+        /* Firefox 18- */
+        color: white; }
+      .contactPage .contact form ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: white; }
+      .contactPage .contact form :-ms-input-placeholder {
+        color: white; }
+
+/*# sourceMappingURL=main.css.map */

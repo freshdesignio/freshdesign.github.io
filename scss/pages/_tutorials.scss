@@ -1,0 +1,86 @@
+.tutorials{
+#Container{
+  text-align: center;
+  .mix{
+    display: none;
+  }
+}
+
+  .item{
+    //border: 3px solid lightblue;
+    height: auto;
+    width: 40%;
+    padding:0;
+    position: relative;
+    font-family: $mono;
+    max-height: 500px;
+    padding: 20px;
+
+    display: inline-block ;
+    vertical-align: top;
+
+    @media only screen and (max-width: 1050px){
+      width: 45%;
+    }
+    a{
+      height: auto;
+      width: 100%;
+    }
+    img{
+      height: auto;
+      width: 100%;
+      max-width: 400px;
+    }
+    @media only screen and (max-width: 975px){
+      .title{
+        font-size: 17px;
+      }
+      .author,
+      .date{
+        font-size: 13px;
+      }
+    }//end 975px
+    @media only screen and (max-width: 775px){
+      width: 48%;
+    }//end 775px
+    @media only screen and (max-width: 700px){
+      width: 90% !important;
+    }//end 700px
+    @media only screen and (max-width: 700px){
+      .title{
+        font-size: 15px;
+      }
+      .author,
+      .date{
+        font-size: 12px;
+      }
+    }
+  }//end .item
+  .title{
+    font-size: 20px;
+    color: #F2D5BC;
+    text-align: center;
+    padding-bottom: 3px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    letter-spacing: 0px;
+  }
+  .date,
+  .author{
+    font-size: 15px;
+    opacity: 0.8;
+    letter-spacing: 2px;
+    font-family: 'Dosis', sans-serif;
+    color: #A0E8AF;
+  }
+  .date{
+    text-align: center;
+  }
+  .author{
+    padding-bottom: 5px;
+    a{
+      color: inherit;
+      border-bottom: 1px solid #A0E8AF;
+    }
+  }
+}//end of .tutoials

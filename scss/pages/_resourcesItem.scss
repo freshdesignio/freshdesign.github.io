@@ -1,0 +1,72 @@
+.resourcesItem{
+
+  position: relative;
+  overflow: scroll;
+  border: 1px solid transparent;
+
+  .logo{
+    position: absolute !important;
+    top:20px;
+    left:20px;
+    a{
+      color: lightblue;
+      text-align: left;
+      font-size: 24px;
+      letter-spacing: 0px;
+      font-family: $logo;
+    }
+
+  }//end .logo
+
+  .bigTitle{
+    text-align: left;
+    font-size: 70px;
+    position: absolute;
+    bottom:20px;
+    left:50px;
+    font-family: $dosis !important;
+
+  }
+  .ul{
+    height: 100%;
+    position: absolute;
+    top:0;
+    right:0px;
+    width: 50%;
+    background-color: rgba(0,0,0,0.1);
+    overflow: scroll;
+    a{
+
+    }
+    .li{
+      margin-top: 30px;
+      display: block;
+    }
+    img{
+      width:auto;
+      height: auto;
+      max-width: 90%;
+    }
+  }
+
+
+}//end .libraryItem
+
+.typographyItem{
+  background: #F1F2B5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F1F2B5 , #135058); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #F1F2B5 , #135058); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  .logo{
+    position: absolute !important;
+    top:20px;
+    left:20px;
+    a{
+      color: lightblue;
+    }
+
+  }//end .logo
+  .bigTitle{
+    color: white;
+    font-family: cursive;
+  }
+}

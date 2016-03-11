@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreshDesign.io</title>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="scss/main.css">
+    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="free">
+    <div class="contactSection">
+      <button class="contactExit">X</button>
+      <h1>Contact</h1>
+      <p>here is a section for some words </p>
+      <form action="http://formspree.io/email@mail.com" method="POST" class="cntr">
+          <input name="name" type="text" id="name" placeholder="Name" Required/>
+          <input name="email" type="email" id="email" placeholder="Email" Required/>
+
+          <input name="subject" type="subject" id="subject" placeholder="Subject" />
+        <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
+				<input type="hidden" name="_next" value="html/responce.html" />
+        <input type="text" name="_gotcha" style="display:none;" />
+          <label for="message"></label>
+          <textarea class="cntr" id="message" name="message" placeholder="Message" Required></textarea>
+          <button class="cntr" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="top">
+      <h1 class="topic">Type: </h1>
+        <ul class=" ul typeHold">
+          <li class="li">Web Design</li>
+          <li class="li">3D</li>
+          <li class="li">Animations</li>
+      </ul>
+      <div class="exit">X</div>
+    </div>
+    <div class="bottom">
+      <h1 class="topic">Components: </h1>
+      <ul class=" ul topicHold">
+        <li class="li">Loading Animation</li>
+        <li class="li typeTopicActive">Forms</li>
+        <li class="li">Banners</li>
+        <li class="li">Progress Bar</li>
+      </ul>
+    </div>
+    <section class="left">
+      <a href="index.html" class="logoHold">
+        <!--<img src="#" alt="">-->
+        <h1>FreshDesign.io</h1>
+      </a>
+      <div class="leftNav">
+        <ul class="ul">
+          <li class="li"><a href="index.html">Inspiration</a></li>
+          <li class="li"><a href="tutorials.html">Tutorials</a></li>
+          <li class="li"><a href="free.html" class="menuActive">Free Components</a></li>
+          <li class="li"><a href="resources.html">Resources</a></li>
+          <li class="li "><a href="#" class="difColor" >About</a></li>
+          <li class="li "><a href="#" class="difColor" >Submissions</a></li>
+          <li class="li "><p class="contactBtn" style="color:#BF7924">Contact</p></li>
+        </ul>
+      </div>
+      <footer>
+        <img src="img/logo.png">
+        <a href="http://matharu.io">Matharu.io</a>
+      </footer>
+    </section>
+
+    <section class="right">
+      <div class="filterHold">
+        <fieldset class="filter-group search">
+          <input class="searchBar" type="text" placeholder="search...">
+        </fieldset>
+        <ul class="topNav">
+          <li class="li sort">
+            <p>Sort:</p>
+            <svg class="sortTriangle triangle" fill="none" stroke="white" stroke-width="2px" height="15px" width="15px">
+              <polygon points="2,12 7,2 12,12"/>
+            </svg>
+          </li>
+          <li class="li filters"><p>Filters</p></li>
+        </ul>
+      </div>
+      <section id="Container">
+        <button class="mix">Stock Photos</button>
+      </section>
+    </section>
+
+  </body>
+
+  <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/velocity_and_ui.min.js"></script>
+  <script type="text/javascript" src="js/lazySizes.min.js"></script>
+  <script type="text/javascript" src="js/mixitup.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+  <script>
+  (function(){
+    console.log('instafunction');
+    $('.top').velocity({ translateX:'-100%'},{duration:0, delay:0,queue:false})
+    $('.bottom').velocity({ translateX:'100%'},{duration:0, delay:0,queue:false})
+
+  })();
+  </script>
+</html>

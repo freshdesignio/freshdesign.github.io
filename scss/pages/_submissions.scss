@@ -1,0 +1,152 @@
+.submissions{
+  height: auto;
+  min-height: 100%;
+  width: 100% !important;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: #F0C27B; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F0C27B , #4B1248); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #F0C27B , #4B1248); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  position: relative;
+
+
+  .logoHold{
+    display: block;
+    margin: 0 auto;
+    height: 70px;
+    width: 250px;
+    position: relative;
+    left:0 !important;
+
+    h1{
+      text-align: center;
+      color: #DCAD75;
+      text-shadow: rgb(94, 41, 41) 5px 2px 6px;
+
+
+    }
+    .defaultLogo{
+      display: block !important;
+      font-size: 26px;
+    }
+  }
+
+.wordsTitle,
+.words{
+  font-family: $dosis;
+}
+  .wordsTitle{
+    color: #E1E572 ;
+    letter-spacing: 3px;
+  }
+
+
+
+  .words{
+     max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    //border: 1px solid white;
+    a{
+      border-bottom: 1px solid black;
+      letter-spacing: 1px;
+      color: black;
+    }
+
+    @media only screen and (max-width: 560px){
+      width: 90%;
+    }
+  }
+
+  .contact{
+    position: relative;
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    @media only screen and (max-width: 460px){
+      width: 80% !important;
+      #email,
+      #name{
+        width: 50% !important;
+      }
+      #name{
+        left:20% !important;
+      }
+
+    }
+
+  form{
+    //border: 1px solid yellow;
+    border: 1px solid transparent;
+    padding: 0;
+    font-family: $mono;
+    height: 350px;
+    margin-top: 20px;
+
+    #name,
+    #email,
+    #message{
+      background-color:transparent;
+      border: 1px solid #E1E572;
+      padding: 10px;
+      color: black;
+      font-size: 15px;
+      &:focus{
+        outline: 0;
+        border: double;
+        color: #E1E572;
+      }
+    }
+    #name,
+    #email{
+      height: 30px;
+      position: absolute;
+      width: 50%;
+      border-bottom: none;
+      top:2px ;
+    }
+    #name{
+      left:1px !important;
+    }
+    #email{
+      right:1px !important;
+      border-left: none;
+    }
+    #message{
+      width: 100%;
+      height: 200px;
+      margin-top: 30px;
+    }
+    button{
+      height: 60px;
+      width: 150px;
+      //border: 1px solid $bottomBlue !important;
+      border: none;
+      //background-color: $bottomBlue;
+      background-color: #68C5DB;
+      //color: $bottomBlue;
+      color: black;
+
+      margin: 20px  auto;
+
+    }
+
+    ::-webkit-input-placeholder {
+       color: #E1E572;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color: #E1E572;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: #E1E572;
+    }
+
+    :-ms-input-placeholder {
+       color: #E1E572;
+    }
+  }//end form
+}//end .contact
+}//end .submissions
