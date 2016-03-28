@@ -927,6 +927,19 @@ body{
           background-color: rgba(0,0,0,0);
         }
     }//end button
+    .fresh{
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: white;
+      font-family: $logo;
+
+      &:before{
+        content:url('../favicon.ico');
+        margin-right: 10px;
+
+      }
+    }//end .fresh
     .afterTutorial{
         display: none;
         position: absolute;

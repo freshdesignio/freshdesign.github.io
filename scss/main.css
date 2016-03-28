@@ -699,6 +699,15 @@ fieldset {
           bottom: 12px;
           left: 10px;
           background-color: transparent; } }
+    .right .item .fresh {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: white;
+      font-family: "Pacifico", cursive; }
+      .right .item .fresh:before {
+        content: url("../favicon.ico");
+        margin-right: 10px; }
     .right .item .afterTutorial {
       display: none;
       position: absolute;
