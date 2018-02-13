@@ -2,9 +2,15 @@
 <html>
   <head>
     <title>Contact/Feedback | FreshDesign.io</title>
+    <script type="text/javascript">
+    	var host = "freshdesign.io"
+	if ((host == window.location.host) && (window.location.protocol != "https:"))
+	    window.location.protocol = "https";
+    </script>
     <meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link rel="canonical" href="https://freshdesign.io" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="scss/main.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
@@ -17,14 +23,13 @@
       <h1 class="defaultLogo">FreshDesign.io</h1>
     </a>
     <h1 class="wordsTitle">Contact / Feedback</h1>
-    <!--<p class="words">Pretty straightforward, if you want your site or an element of it to be featured use this form. Please leave you name and email if you would like to know what happens<br>If you want to get in touch for another reason use the 'contact/feedback' link on the home page.</p>-->
     <p class="words">If you would like to get in touch or if you have a comment or question about anything, no matter how small, please use this form. If you would like to submit your website head over to the <a href="submissions.html" style="border-bottom:1px solid black;">submissions</a> page.</p>
     <div class="contact">
-      <form action="http://formspree.io/thefreshdesign.io@gmail.com" method="POST" class="cntr">
+      <form action="https://formspree.io/thefreshdesign.io@gmail.com" method="POST" class="cntr">
           <input name="contactPageName" type="text" id="name" placeholder="Name"/>
           <input name="email" type="email" id="email" placeholder="Email"/>
         <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
-				<input type="hidden" name="_next" value="responce.html" />
+	<input type="hidden" name="_next" value="responce.html" />
         <input type="text" name="_gotcha" style="display:none;" />
           <label for="message"></label>
           <textarea class="cntr" id="message" name="message" placeholder="Message" Required></textarea>
