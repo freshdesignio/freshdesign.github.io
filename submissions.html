@@ -2,9 +2,15 @@
 <html>
   <head>
     <title>Submissions | FreshDesign.io</title>
+    <script type="text/javascript">
+       var host = "freshdesign.io"
+       if ((window.location.host) && (window.location.protocol != "https:"))
+       window.location.protocol = "https";
+    </script>
     <meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link rel="canonical" href="https://freshdesign.io"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="scss/main.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
@@ -19,7 +25,7 @@
     <h1 class="wordsTitle">Submissions</h1>
     <p class="words">Please use this form if you would like to submit your website or an element of it to be reviewed before being featured on freshdesign.io. If you would like to be updated leave your name and email. Or you could leave it blank and submit it anonymously. <br>If you want to get in touch for another reason please go to the <a href="contact.html">Contact</a> page.</p>
     <div class="contact">
-      <form action="http://formspree.io/thefreshdesign.io@gmail.com" method="POST" class="cntr">
+      <form action="https://formspree.io/thefreshdesign.io@gmail.com" method="POST" class="cntr">
           <input name="submissionsPageName" type="text" id="name" placeholder="Name"/>
           <input name="email" type="email" id="email" placeholder="Email"/>
         <!-- temporary comment,  (This is a honeypot to catch webscrapers) -->
