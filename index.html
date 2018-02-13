@@ -2,9 +2,15 @@
 <html>
   <head>
     <title>FreshDesign.io</title>
+    <script type="text/javascript">
+      var host = "freshdesign.io";
+      if ((window.location.host) && (window.location.protocol != "https:))
+         window.location.protocol = "https";
+    </script>
     <meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link rel="canonical" href="https://freshdesign.io"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="scss/main.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
@@ -24,7 +30,7 @@
 
       </ul>
       <div class="mailingList">
-        <form action="http://formspree.io/thefreshdesign.io@gmail.com" method="POST">
+        <form action="https://formspree.io/thefreshdesign.io@gmail.com" method="POST">
           <label>Every Monday.</label>
           <input name="emailHomeMobile" type="email" id="newsLetter" placeholder="Mailing List" Required/>
           <input type="hidden" name="_next" value="responceMailingList.html" />
@@ -39,7 +45,7 @@
     <p class="sort" data-sort="random">Random</p>
   </div>
   <div class="mailingList">
-    <form action="http://formspree.io/thefreshdesign.io@gmail.com" method="POST">
+    <form action="https://formspree.io/thefreshdesign.io@gmail.com" method="POST">
       <label>Every Monday.</label>
       <input name="emailHomeReg" type="email" id="newsLetter" placeholder="Mailing List" Required/>
       <input type="hidden" name="_next" value="responceMailingList.html" />
